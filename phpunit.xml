@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>					
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"					
+        xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"					
+        bootstrap="vendor/autoload.php"					
+        colors="true"					
+        cacheResult ="false"					
+>					
+<testsuites>					
+    <testsuite name="SqlWsContractImport">					
+        <file>./Tests/MinhSang_UserModelTest.php</file>					
+        <file>./Tests/MinhSang_BankModelTest.php</file>
+        <file>./Tests/MinhSang_FactoryTest.php</file>
+        <file>./tests/UserModelTest.php</file>
+        <file>./tests/GSang_DeleteUserByIdTest.php</file>
+        <file>./tests/GSang_UserModelAuthTest.php</file>
+        <file>./tests/GSang_UpdateUserIdBankModelTest.php</file>
+        <file>./Tests/Phu_BankModelTest.php</file>
+        <file>./Tests/Phu_UserModelPhuTest.php</file>
+        <file>./Tests/Phu_FactoryPatternTest.php</file>
+        <file>./Tests/HaiUserModelTest.php</file>
+        <file>./Tests/HaiBankModelTest.php</file>
+        <file>./Tests/QuyBankModelTest.php</file>
+        <file>./Tests/QuyUserModelTest.php</file>
+    </testsuite>					
+</testsuites>					
+<filter>					
+    <whitelist processUncoveredFilesFromWhitelist="true">					
+    <directory suffix=".php">./models</directory>					
+    </whitelist>					
+</filter>					
+    <php>					    
+        <server name="APP_ENV" value="testing"/>					
+        <server name="BCRYPT_ROUNDS" value="4"/>					
+        <server name="CACHE_DRIVER" value="array"/>					
+        <server name="MAIL_MAILER" value="array"/>					
+        <server name="QUEUE_CONNECTION" value="sync"/>					
+        <server name="SESSION_DRIVER" value="array"/>					
+        <server name="TELESCOPE_ENABLED" value="false"/>					
+    </php>					
+</phpunit>					
